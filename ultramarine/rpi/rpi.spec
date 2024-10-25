@@ -63,7 +63,7 @@ BuildRequires:  devtoolset-8-gcc
 BuildRequires:  devtoolset-8-make
 %endif
 
-Compile with SELinux but disable per default
+#Compile with SELinux but disable per default
 Patch100:       bcm2709_selinux_config.patch
 Patch101:       bcm2711_selinux_config.patch
 
