@@ -28,6 +28,8 @@
 %bcond_without atomic_gnome
 %bcond_without atomic_xfce
 %bcond_without chromebook
+%bcond_without surface
+
 
 %if %{with flagship} || %{with plasma} || %{with gnome} || %{with xfce} || %{with atomic_flagship} || %{with atomic_plasma} || %{with atomic_gnome} || %{with atomic_xfce}
 %global with_desktop 1
@@ -101,6 +103,8 @@ Source62:   ultramarine-plasma-protected.conf
 Source63:   ultramarine-xfce-protected.conf
 
 Source64:   88-ultramarine-chromebook-default.preset
+
+Source65:   91-ultramarine-surface-default.preset
 
 BuildRequires:    systemd-rpm-macros
 
@@ -513,6 +517,16 @@ Summary:        Common configuration package for chromebook variants
 Common configuration package for chromebook variants
 %endif
 
+####### Surface #######
+
+%if %{with surface}
+%package        surface
+Summary:        Common configuration package for surface variants
+
+%description surface
+Common configuration package for surface variants
+%endif
+
 ####### Desktop #######
 
 %if %{with desktop}
@@ -849,6 +863,13 @@ install -Dm0644 %{SOURCE64} -t $RPM_BUILD_ROOT%{_prefix}/lib/systemd/system-pres
 
 %endif
 
+%if %{with surface}
+
+# Install systemd presets for surface
+install -Dm0644 %{SOURCE65} -t $RPM_BUILD_ROOT%{_prefix}/lib/systemd/system-preset/
+
+%endif
+
 %if %{with gnome} || %{with atomic_gnome}
 
 # Install systemd presets for gnome
@@ -1016,6 +1037,11 @@ install -Dm0644 %{SOURCE32} -t %{buildroot}%{_datadir}/polkit-1/rules.d/
 %if %{with chromebook}
 %files chromebook
 %{_prefix}/lib/systemd/system-preset/88-ultramarine-chromebook-default.preset
+%endif
+
+%if %{with surface}
+%files surface
+%{_prefix}/lib/systemd/system-preset/91-ultramarine-surface-default.preset
 %endif
 
 %if %{with atomic_desktop}
