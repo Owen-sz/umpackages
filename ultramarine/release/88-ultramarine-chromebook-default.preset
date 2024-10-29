@@ -4,3 +4,4 @@
 enable cros-keyboard-map.service
 enable keyd.service
 enable chromebook-usbc.service
+enable msm-cros-efs-loader.service
