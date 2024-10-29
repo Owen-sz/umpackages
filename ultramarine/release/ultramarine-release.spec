@@ -44,7 +44,7 @@
 Summary:	Ultramarine Linux release files
 Name:		ultramarine-release
 Version:	%{dist_version}
-Release:	3%{?dist}
+Release:	4%{?dist}
 License:	MIT
 Source0:	LICENSE
 URL:        https://ultramarine-linux.org
@@ -265,6 +265,7 @@ Summary:		Package providing the Ultramarine Plasma Identity
 RemovePathPostfixes: .plasma
 Provides:		ultramarine-release-identity = %{version}-%{release}
 Conflicts:		ultramarine-release-identity
+Obsoletes:        ultramarine-release-identity-kde < 40-12
 Requires(meta):	ultramarine-release-plasma = %{version}-%{release}
 
 %description identity-plasma
