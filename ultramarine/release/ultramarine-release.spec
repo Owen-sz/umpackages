@@ -28,8 +28,11 @@
 %bcond_without atomic_gnome
 %bcond_without atomic_xfce
 %bcond_without chromebook
+%ifarch x86_64
 %bcond_without surface
-
+%else
+%bcond_with surface
+%endif
 
 %if %{with flagship} || %{with plasma} || %{with gnome} || %{with xfce} || %{with atomic_flagship} || %{with atomic_plasma} || %{with atomic_gnome} || %{with atomic_xfce}
 %global with_desktop 1
