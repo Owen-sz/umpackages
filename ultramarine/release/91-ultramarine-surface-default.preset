@@ -1,0 +1,5 @@
+# Enable Ultramarine Surface images specific services in this file
+
+# Enable Surface services
+enable surface-dtx-daemon.service
+enable surface-dtx-userd.service
