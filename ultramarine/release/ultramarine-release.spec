@@ -109,7 +109,7 @@ Source64:   88-ultramarine-chromebook-default.preset
 
 Source65:   91-ultramarine-surface-default.preset
 
-Source70:   polycrystal-ultramarine-flaghsip.json
+Source70:   polycrystal-ultramarine-flagship.json
 Source71:   polycrystal-ultramarine-gnome.json
 Source72:   polycrystal-ultramarine-plasma.json
 Source73:   polycrystal-ultramarine-xfce.json
@@ -186,7 +186,6 @@ Provides:   system-release(%{version})
 Provides:   base-module(platform:f%{version})
 Requires:   ultramarine-release-common = %{version}-%{release}
 Requires:   ultramarine-release-desktop = %{version}-%{release}
-Requires:   polycrystal
 Provides:   system-release-product
 # ultramarine-release-common Requires: ultramarine-release-identity, so at least one
 # package must provide it. This Recommends: pulls in
@@ -225,7 +224,6 @@ Provides:   base-module(platform:f%{version})
 Requires:   ultramarine-release-common = %{version}-%{release}
 Requires:   ultramarine-release-desktop = %{version}-%{release}
 Requires:   ultramarine-release-atomic-desktop = %{version}-%{release}
-Requires:   polycrystal
 Provides:   system-release-product
 # ultramarine-release-common Requires: ultramarine-release-identity, so at least one
 # package must provide it. This Recommends: pulls in
@@ -262,7 +260,6 @@ Provides:   system-release(%{version})
 Provides:   base-module(platform:f%{version})
 Requires:   ultramarine-release-common = %{version}-%{release}
 Requires:   ultramarine-release-desktop = %{version}-%{release}
-Requires:   polycrystal
 Provides:   system-release-product
 Provides: ultramarine-release-kde = %{version}-%{release}
 Obsoletes: ultramarine-release-kde < 40-12
@@ -305,7 +302,6 @@ Provides:   base-module(platform:f%{version})
 Requires:   ultramarine-release-common = %{version}-%{release}
 Requires:   ultramarine-release-desktop = %{version}-%{release}
 Requires:   ultramarine-release-atomic-desktop = %{version}-%{release}
-Requires:   polycrystal
 Provides:   system-release-product
 # ultramarine-release-common Requires: ultramarine-release-identity, so at least one
 # package must provide it. This Recommends: pulls in
@@ -343,7 +339,6 @@ Provides:   system-release(%{version})
 Provides:   base-module(platform:f%{version})
 Requires:   ultramarine-release-common = %{version}-%{release}
 Requires:   ultramarine-release-desktop = %{version}-%{release}
-Requires:   polycrystal
 Provides:   system-release-product
 Recommends: gnome-shell-extension-pop-shell
 Recommends: gnome-shell-extension-appindicator
@@ -390,7 +385,6 @@ Provides:   base-module(platform:f%{version})
 Requires:   ultramarine-release-common = %{version}-%{release}
 Requires:   ultramarine-release-desktop = %{version}-%{release}
 Requires:   ultramarine-release-atomic-desktop = %{version}-%{release}
-Requires:   polycrystal
 Provides:   system-release-product
 Recommends: gnome-shell-extension-pop-shell
 Recommends: gnome-shell-extension-appindicator
@@ -449,7 +443,6 @@ Provides:   system-release(%{version})
 Provides:   base-module(platform:f%{version})
 Requires:   ultramarine-release-common = %{version}-%{release}
 Requires:   ultramarine-release-desktop = %{version}-%{release}
-Requires:   polycrystal
 Provides:   system-release-product
 # ultramarine-release-common Requires: ultramarine-release-identity, so at least one
 # package must provide it. This Recommends: pulls in
@@ -497,7 +490,6 @@ Provides:   base-module(platform:f%{version})
 Requires:   ultramarine-release-common = %{version}-%{release}
 Requires:   ultramarine-release-desktop = %{version}-%{release}
 Requires:   ultramarine-release-atomic-desktop = %{version}-%{release}
-Requires:   polycrystal
 Provides:   system-release-product
 # ultramarine-release-common Requires: ultramarine-release-identity, so at least one
 # package must provide it. This Recommends: pulls in
@@ -807,10 +799,10 @@ mkdir -p %{buildroot}%{_prefix}/lib/sysctl.d/
 
 # Polycrystal entries
 mkdir -p %{buildroot}%{_sysconfdir}/polycrystal/entries
-install %{SOURCE70} %{buildroot}%{_sysconfdir}/polycrystal/entries/ultramarine-flagship.conf
-install %{SOURCE71} %{buildroot}%{_sysconfdir}/polycrystal/entries/ultramarine-gnome.conf
-install %{SOURCE72} %{buildroot}%{_sysconfdir}/polycrystal/entries/ultramarine-plasma.conf
-install %{SOURCE73} %{buildroot}%{_sysconfdir}/polycrystal/entries/ultramarine-xfce.conf
+install %{SOURCE70} %{buildroot}%{_sysconfdir}/polycrystal/entries/ultramarine-flagship.json
+install %{SOURCE71} %{buildroot}%{_sysconfdir}/polycrystal/entries/ultramarine-gnome.json
+install %{SOURCE72} %{buildroot}%{_sysconfdir}/polycrystal/entries/ultramarine-plasma.json
+install %{SOURCE73} %{buildroot}%{_sysconfdir}/polycrystal/entries/ultramarine-xfce.json
 
 #########################
 
