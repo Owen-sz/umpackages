@@ -75,22 +75,37 @@
       <packagereq type="mandatory">ultramarine-flagship-filesystem</packagereq>
       <packagereq type="default">ultramarine-backgrounds-gnome</packagereq>
       <packagereq type="default">ultramarine-backgrounds</packagereq>
-      <packagereq type="default">lightdm-gtk</packagereq>
+      <packagereq type="default">lightdm</packagereq>
+      <packagereq type="default">slick-greeter</packagereq>
       <packagereq type="default">nemo-python</packagereq>
       <packagereq type="default">nemo-preview</packagereq>
       <packagereq type="default">nemo-emblems</packagereq>
-      <packagereq type="default">helium-gtk-theme</packagereq>
-      <packagereq type="default">hydrogen-icon-theme</packagereq>
+      <packagereq type="default">fluent-gtk-theme</packagereq>
+      <packagereq type="default">fluent-icon-theme</packagereq>
       <packagereq type="default">ptyxis</packagereq>
-      <packagereq type="default">seahorse</packagereq>
       <packagereq type="default">gnome-system-monitor</packagereq>
-      <packagereq type="default">gnome-calculator</packagereq>
       <packagereq type="default">gnome-software</packagereq>
       <packagereq type="default">gs-plugin-ultramarine-pkgdb-collections</packagereq>
       <packagereq type="default">xdg-user-dirs-gtk</packagereq>
       <packagereq type="default">xdg-desktop-portal-gtk</packagereq>
     </packagelist>
   </group>
+  <id>ultramarine-flagship-apps</id>
+  <_name>Ultramarine Flagship Applications</_name>
+  <_description>Apps included with Ultramarine Flagship</_description>
+  <packagelist>
+    <packagereq type="default">eog</packagereq>
+    <packagereq type="default">firefox</packagereq>
+    <packagereq type="default">gedit</packagereq>
+    <!-- <packagereq type="default">gnome-calculator</packagereq> flatpak'd -->
+    <packagereq type="default">gnome-disk-utility</packagereq>
+    <packagereq type="default">gnome-system-monitor</packagereq>
+    <packagereq type="default">nemo</packagereq>
+    <packagereq type="default">nemo-fileroller</packagereq>
+    <packagereq type="default">nemo-seahorse</packagereq>
+    <packagereq type="default">parole</packagereq>
+    <packagereq type="default">seahorse</packagereq>
+  </packagelist>
   <environment>
     <id>ultramarine-flagship-product-environment</id>
     <name>Ultramarine Flagship</name>
@@ -103,7 +118,7 @@
       <groupid>firefox</groupid>
       <groupid>fonts</groupid>
       <groupid>budgie-desktop</groupid>
-      <groupid>budgie-desktop-apps</groupid>
+      <groupid>ultramarine-flagship-apps</groupid>
       <groupid>guest-desktop-agents</groupid>
       <groupid>hardware-support</groupid>
       <groupid>libreoffice</groupid>
@@ -125,7 +140,7 @@
     <default>false</default>
     <uservisible>false</uservisible>
     <packagelist>
-      <packagereq type="default">gnome-extensions-app</packagereq>
+      <!-- <packagereq type="default">gnome-extensions-app</packagereq> flatpak'd -->
       <packagereq type="default">gnome-shell-extension-appindicator</packagereq>
       <packagereq type="default">gnome-shell-extension-windowsNavigator</packagereq>
       <packagereq type="default">gnome-shell-extension-appmenu-is-back</packagereq>
@@ -134,9 +149,99 @@
       <packagereq type="default">ultramarine-release-gnome</packagereq>
       <packagereq type="optional">ultramarine-release-identity-gnome</packagereq>
       <packagereq type="default">gs-plugin-ultramarine-pkgdb-collections</packagereq>
-      <packagereq type="default">geary</packagereq>
     </packagelist>
   </group>
+  <group>
+    <!-- NOTE: You will want to sync this with the upstream gnome desktop group every major release -->
+    <id>ultramarine-gnome-desktop</id>
+    <name>Ultramarine GNOME desktop</name>
+    <description>The group for packages comprising the GNOME desktop, based on the upstream set.</description>
+    <default>false</default>
+    <uservisible>false</uservisible>
+    <packagelist>
+        <!-- <packagereq type="default">geary</packagereq> flatpak'd -->
+        <packagereq type="mandatory">dconf</packagereq>
+        <packagereq type="mandatory">gdm</packagereq>
+        <packagereq type="mandatory">gnome-boxes</packagereq>
+        <!-- <packagereq type="mandatory">gnome-connections</packagereq> flatpak'd -->
+        <packagereq type="mandatory">gnome-control-center</packagereq>
+        <packagereq type="mandatory">gnome-initial-setup</packagereq>
+        <packagereq type="mandatory">gnome-session-wayland-session</packagereq>
+        <packagereq type="mandatory">gnome-settings-daemon</packagereq>
+        <packagereq type="mandatory">gnome-shell</packagereq>
+        <packagereq type="mandatory">gnome-software</packagereq>
+        <!-- <packagereq type="mandatory">gnome-text-editor</packagereq> flatpak'd -->
+        <packagereq type="mandatory">nautilus</packagereq>
+        <packagereq type="mandatory">polkit</packagereq>
+        <packagereq type="mandatory">ptyxis</packagereq>
+        <packagereq type="mandatory">yelp</packagereq>
+        <packagereq type="default">adobe-source-code-pro-fonts</packagereq>
+        <packagereq type="default">avahi</packagereq>
+        <packagereq type="default">baobab</packagereq>
+        <!-- <packagereq type="default">evince</packagereq> flatpak'd
+        <packagereq type="default">evince-djvu</packagereq> -->
+        <packagereq arch="aarch64,ppc64le,x86_64" type="default">fprintd-pam</packagereq>
+        <packagereq type="default">glib-networking</packagereq>
+        <packagereq type="default">gnome-backgrounds</packagereq>
+        <packagereq type="default">gnome-bluetooth</packagereq>
+        <packagereq type="default">gnome-browser-connector</packagereq>
+        <!-- <packagereq type="default">gnome-calculator</packagereq> flatpak'd -->
+        <!-- <packagereq type="default">gnome-calendar</packagereq> flatpak'd -->
+        <packagereq type="default">gnome-characters</packagereq>
+        <packagereq type="default">gnome-classic-session</packagereq>
+        <!-- <packagereq type="default">gnome-clocks</packagereq> flatpak'd -->
+        <packagereq type="default">gnome-color-manager</packagereq>
+        <!-- <packagereq type="default">gnome-contacts</packagereq> flatpak'd d-->
+        <packagereq type="default">gnome-disk-utility</packagereq>
+        <packagereq type="default">gnome-epub-thumbnailer</packagereq>
+        <packagereq type="default">gnome-font-viewer</packagereq>
+        <packagereq type="default">gnome-logs</packagereq>
+        <!-- <packagereq type="default">gnome-maps</packagereq> flatpak'd -->
+        <packagereq type="default">gnome-remote-desktop</packagereq>
+        <packagereq type="default">gnome-system-monitor</packagereq>
+        <packagereq type="default">gnome-user-docs</packagereq>
+        <packagereq type="default">gnome-user-share</packagereq>
+        <!-- <packagereq type="default">gnome-weather</packagereq> flatpak'd -->
+        <packagereq arch="aarch64,ppc64le,x86_64" type="default">gvfs-afc</packagereq>
+        <packagereq type="default">gvfs-afp</packagereq>
+        <packagereq type="default">gvfs-archive</packagereq>
+        <packagereq type="default">gvfs-fuse</packagereq>
+        <packagereq type="default">gvfs-goa</packagereq>
+        <packagereq arch="aarch64,ppc64le,x86_64" type="default">gvfs-gphoto2</packagereq>
+        <packagereq arch="aarch64,ppc64le,x86_64" type="default">gvfs-mtp</packagereq>
+        <packagereq type="default">gvfs-smb</packagereq>
+        <packagereq type="default">librsvg2</packagereq>
+        <packagereq type="default">libsane-hpaio</packagereq>
+        <packagereq type="default">loupe</packagereq>
+        <packagereq type="default">mesa-dri-drivers</packagereq>
+        <packagereq type="default">mesa-libEGL</packagereq>
+        <packagereq type="default">ModemManager</packagereq>
+        <packagereq type="default">NetworkManager-adsl</packagereq>
+        <packagereq type="default">NetworkManager-openconnect-gnome</packagereq>
+        <packagereq type="default">NetworkManager-openvpn-gnome</packagereq>
+        <packagereq type="default">NetworkManager-ppp</packagereq>
+        <packagereq type="default">NetworkManager-pptp-gnome</packagereq>
+        <packagereq type="default">NetworkManager-ssh-gnome</packagereq>
+        <packagereq type="default">NetworkManager-vpnc-gnome</packagereq>
+        <packagereq type="default">NetworkManager-wwan</packagereq>
+        <packagereq type="default">PackageKit-command-not-found</packagereq>
+        <packagereq type="default">PackageKit-gtk3-module</packagereq>
+        <packagereq type="default">rygel</packagereq>
+        <packagereq type="default">sane-backends-drivers-scanners</packagereq>
+        <packagereq type="default">simple-scan</packagereq>
+        <!-- <packagereq type="default">snapshot</packagereq> flatpak'd -->
+        <packagereq type="default">sushi</packagereq>
+        <packagereq type="default">systemd-oomd-defaults</packagereq>
+        <packagereq type="default">tracker</packagereq>
+        <packagereq type="default">tracker-miners</packagereq>
+        <packagereq type="default">xdg-desktop-portal</packagereq>
+        <packagereq type="default">xdg-desktop-portal-gnome</packagereq>
+        <packagereq type="default">xdg-desktop-portal-gtk</packagereq>
+        <packagereq type="default">xdg-user-dirs-gtk</packagereq>
+        <packagereq type="default">seahorse</packagereq>
+    </packagelist>
+  </group>
+
   <environment>
     <id>ultramarine-gnome-product-environment</id>
     <name>Ultramarine GNOME</name>
@@ -148,7 +253,8 @@
       <groupid>standard</groupid>
       <groupid>firefox</groupid>
       <groupid>fonts</groupid>
-      <groupid>gnome-desktop</groupid>
+      <!-- <groupid>gnome-desktop</groupid> -->
+      <groupid>ultramarine-gnome-desktop</groupid>
       <groupid>guest-desktop-agents</groupid>
       <groupid>hardware-support</groupid>
       <groupid>libreoffice</groupid>
@@ -179,14 +285,14 @@
       <packagereq type="default">fcitx5-qt</packagereq>
       <packagereq type="default">fcitx5-configtool</packagereq>
       <packagereq type="default">kcm-fcitx5</packagereq>
-      <packagereq type="default">okular</packagereq>
+      <!-- <packagereq type="default">okular</packagereq> flatpak'd -->
       <packagereq type="default">gwenview</packagereq>
-      <packagereq type="default">kamoso</packagereq>
-      <packagereq type="default">kolourpaint</packagereq>
+      <!-- <packagereq type="default">kamoso</packagereq> flatpak'd -->
+      <!-- <packagereq type="default">kolourpaint</packagereq> flatpak'd -->
       <packagereq type="default">kate</packagereq>
       <packagereq type="default">kmail</packagereq>
-      <packagereq type="default">haruna</packagereq>
-      <packagereq type="default">kcalc</packagereq>
+      <!-- <packagereq type="default">haruna</packagereq> flatpak'd -->
+      <!-- <packagereq type="default">kcalc</packagereq> flatpak'd -->
       <packagereq type="default">krdp</packagereq>
     </packagelist>
   </group>
@@ -198,7 +304,7 @@
       <groupid>base-graphical</groupid>
       <groupid>container-management</groupid>
       <groupid>core</groupid>
-      <groupid>standard</groupid>     
+      <groupid>standard</groupid>
       <groupid>firefox</groupid>
       <groupid>fonts</groupid>
       <groupid>kde-desktop</groupid>
@@ -240,13 +346,12 @@
       <packagereq type="default">ultramarine-backgrounds-common</packagereq>
       <packagereq type="default">seahorse</packagereq>
       <packagereq type="default">gnome-software</packagereq>
-      <packagereq type="default">evince</packagereq>
-      <packagereq type="default">catfish</packagereq>
-      <packagereq type="default">geary</packagereq>
+      <!-- <packagereq type="default">evince</packagereq> flatpak'd -->
+      <!-- <packagereq type="default">geary</packagereq> flatpak'd -->
       <packagereq type="default">firefox</packagereq>
-      <packagereq type="default">gnome-calculator</packagereq>
+      <!-- <packagereq type="default">gnome-calculator</packagereq> flatpak'd -->
       <packagereq type="default">mousepad</packagereq>
-      <packagereq type="default">ristretto</packagereq>
+      <packagereq type="default">eog</packagereq>
       <packagereq type="default">xarchiver</packagereq>
       <packagereq type="default">xfce4-clipman-plugin</packagereq>
       <packagereq type="default">xfce4-dict-plugin</packagereq>
