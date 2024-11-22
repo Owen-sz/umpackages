@@ -5,3 +5,6 @@ enable com.system76.Scheduler.service
 
 # On Ultramarine, we just use Flathub
 disable flatpak-add-fedora-repos.service
+
+# We use polycrystal to install Flatpaks
+enable polycrystal.service
