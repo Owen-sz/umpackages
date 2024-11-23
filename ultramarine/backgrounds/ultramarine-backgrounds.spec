@@ -3,7 +3,7 @@
 
 Name: ultramarine-backgrounds
 Version: %(echo %ver | sed 's/-/~/g')
-Release: 1%{?dist}
+Release: 2%{?dist}
 BuildArch: noarch
 # details for the artworks' licenses can be seen in the COPYING file
 License: CC-BY-SA 4.0 and CC0
@@ -118,14 +118,14 @@ compat_link() {
 
 DEFAULT_WALL="41/viewports-light.png"
 DEFAULT_DARK_WALL="41/viewports-dark.png"
-DEFAULT_XML="41/lost.xml"
+DEFAULT_XML="41/viewports.xml"
 
 # Let's generate our default gschema override file
 
 cat << EOF > %{buildroot}%{_datadir}/glib-2.0/schemas/30_default_backgrounds.gschema.override
 [org.gnome.desktop.background]
-picture-uri='file://%{_datadir}/backgrounds/ultramarine-linux/$DEFAULT_WALL'
-picture-uri-dark='file:///%{_datadir}/backgrounds/ultramarine-linux/$DEFAULT_DARK_WALL'
+picture-uri='file://%{_datadir}/backgrounds/ultramarine-linux/default.png'
+picture-uri-dark='file:///%{_datadir}/backgrounds/ultramarine-linux/default-dark.png'
 EOF
 
 
