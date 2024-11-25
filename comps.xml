@@ -325,6 +325,35 @@
       <groupid>ultramarine-plasma-product</groupid>
     </grouplist>
   </environment>
+  <environment>
+    <!-- NOTE: keep this in sync with ultramarine-kde-product-environment for backwards compat -->
+    <id>ultramarine-kde-product-environment</id>
+    <name>Ultramarine plasma (legacy)</name>
+    <description>Ultramarine Plasma is an Ultramarine experience powered by the Plasma desktop environment. (This is a legacy group kept for backwards compatibility.)</description>
+    <grouplist>
+      <groupid>base-graphical</groupid>
+      <groupid>container-management</groupid>
+      <groupid>core</groupid>
+      <groupid>standard</groupid>
+      <groupid>firefox</groupid>
+      <groupid>fonts</groupid>
+      <groupid>kde-desktop</groupid>
+      <groupid>critical-path-kde</groupid>
+      <groupid>guest-desktop-agents</groupid>
+      <groupid>hardware-support</groupid>
+      <groupid>libreoffice</groupid>
+      <groupid>multimedia</groupid>
+      <!-- <groupid>sound-and-video</groupid> -->
+      <groupid>networkmanager-submodules</groupid>
+      <groupid>printing</groupid>
+      <groupid>desktop-accessibility</groupid>
+      <!-- <groupid>input-methods</groupid> -->
+      <!-- We should use fcitx5 in plasma instead -->
+      <groupid>ultramarine-product-common</groupid>
+      <groupid>ultramarine-desktop-product-common</groupid>
+      <groupid>ultramarine-plasma-product</groupid>
+    </grouplist>
+  </environment>
   <group>
     <id>ultramarine-xfce-product</id>
     <name>Ultramarine Xfce product core</name>
