@@ -2,6 +2,17 @@
 <!DOCTYPE comps PUBLIC "-//Red Hat, Inc.//DTD Comps info//EN" "comps.dtd">
 <comps>
   <group>
+    <!-- We don't include this in environment groups, to not install flatpaks that conflict with already installed RPMs during the 40 to 41 upgrade -->
+    <id>default-flatpak-support</id>
+    <name>Default Flatpak support</name>
+    <description>Default Flatpak support for Ultramarine products</description>
+    <default>false</default>
+    <uservisible>false</uservisible>
+    <packagelist>
+      <packagereq type="mandatory">polycrystal</packagereq>
+    </packagelist>
+  </group>
+  <group>
     <id>multimedia</id>
     <name>Multimedia</name>
     <description>Audio/video framework common to desktops</description>
@@ -58,7 +69,6 @@
       <packagereq type="default">sipa-fonts</packagereq>
       <packagereq type="default">ibus-mozc</packagereq>
       <packagereq type="default">mozc</packagereq>
-      <packagereq type="default">polycrystal</packagereq>
     </packagelist>
   </group>
   <group>
