@@ -8,7 +8,7 @@ Summary: Config files for KDE
 Name:    kde-settings
 Epoch:   1
 Version: 41
-Release: 4%{?dist}
+Release: 5%{?dist}
 
 License: MIT
 Url:     https://github.com/Ultramarine-Linux/kde-settings
