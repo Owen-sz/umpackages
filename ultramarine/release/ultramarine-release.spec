@@ -79,8 +79,8 @@ Source9:	90-default-user.preset
 Source10:	89-ultramarine-default.preset
 
 Source12:   60-ultramarine-presets.conf
-Source13:   lightdm-gtk-greeter-flagship.conf
-Source14:   lightdm-gtk-greeter-xfce.conf
+Source13:   slick-greeter-flagship.conf
+Source14:   slick-greeter-xfce.conf
 Source15:   50_ultramarine-gnome.gschema.override
 
 Source19:   distro-template.swidtag
@@ -809,10 +809,10 @@ install %{SOURCE73} %{buildroot}%{_sysconfdir}/polycrystal/entries/ultramarine-x
 # Budgie config
 mkdir -p %{buildroot}%{_sysconfdir}/lightdm/lightdm.conf.d/
 install %{SOURCE12} %{buildroot}%{_sysconfdir}/lightdm/lightdm.conf.d/
-install %{SOURCE13} %{buildroot}%{_sysconfdir}/lightdm/lightdm.conf.d/50-ultramarine-flagship-lightdm-gtk-greeter.conf
+install %{SOURCE13} %{buildroot}%{_sysconfdir}/lightdm/lightdm.conf.d/50-ultramarine-flagship-slick-greeter.conf
 
 # XFCE config
-install %{SOURCE14} %{buildroot}%{_sysconfdir}/lightdm/lightdm.conf.d/50-ultramarine-xfce-lightdm-gtk-greeter.conf
+install %{SOURCE14} %{buildroot}%{_sysconfdir}/lightdm/lightdm.conf.d/50-ultramarine-xfce-slick-greeter.conf
 
 # GNOME config
 install -Dm0644 %{SOURCE15} -t %{buildroot}%{_datadir}/glib-2.0/schemas/
@@ -979,7 +979,7 @@ install -Dm0644 %{SOURCE32} -t %{buildroot}%{_datadir}/polkit-1/rules.d/
 %{_sysconfdir}/dnf/protected.d/ultramarine-flagship.conf
 %config %{_sysconfdir}/polycrystal/entries/ultramarine-flagship.json
 %{_sysconfdir}/lightdm/lightdm.conf.d/60-ultramarine-presets.conf
-%{_sysconfdir}/lightdm/lightdm.conf.d/50-ultramarine-flagship-lightdm-gtk-greeter.conf
+%{_sysconfdir}/lightdm/lightdm.conf.d/50-ultramarine-flagship-slick-greeter.conf
 %endif
 
 %if %{with atomic_flagship}
@@ -989,7 +989,7 @@ install -Dm0644 %{SOURCE32} -t %{buildroot}%{_datadir}/polkit-1/rules.d/
 %attr(0644,root,root) %{_swidtagdir}/org.ultramarinelinux.Ultramarine-edition.swidtag.atomic-flagship
 %config %{_sysconfdir}/polycrystal/entries/ultramarine-flagship.json
 %{_sysconfdir}/lightdm/lightdm.conf.d/60-ultramarine-presets.conf
-%{_sysconfdir}/lightdm/lightdm.conf.d/50-ultramarine-flagship-lightdm-gtk-greeter.conf
+%{_sysconfdir}/lightdm/lightdm.conf.d/50-ultramarine-flagship-slick-greeter.conf
 %endif
 
 %if %{with plasma}
@@ -1041,7 +1041,7 @@ install -Dm0644 %{SOURCE32} -t %{buildroot}%{_datadir}/polkit-1/rules.d/
 %config %{_sysconfdir}/polycrystal/entries/ultramarine-xfce.json
 %{_sysconfdir}/skel/.config/xfce4/
 %{_sysconfdir}/lightdm/lightdm.conf.d/60-ultramarine-presets.conf
-%{_sysconfdir}/lightdm/lightdm.conf.d/50-ultramarine-xfce-lightdm-gtk-greeter.conf
+%{_sysconfdir}/lightdm/lightdm.conf.d/50-ultramarine-xfce-slick-greeter.conf
 %endif
 
 %if %{with atomic_xfce}
@@ -1052,7 +1052,7 @@ install -Dm0644 %{SOURCE32} -t %{buildroot}%{_datadir}/polkit-1/rules.d/
 %config %{_sysconfdir}/polycrystal/entries/ultramarine-xfce.json
 %{_sysconfdir}/skel/.config/xfce4/
 %{_sysconfdir}/lightdm/lightdm.conf.d/60-ultramarine-presets.conf
-%{_sysconfdir}/lightdm/lightdm.conf.d/50-ultramarine-xfce-lightdm-gtk-greeter.conf
+%{_sysconfdir}/lightdm/lightdm.conf.d/50-ultramarine-xfce-slick-greeter.conf
 %endif
 
 %if %{with desktop}
