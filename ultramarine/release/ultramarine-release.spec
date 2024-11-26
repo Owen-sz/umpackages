@@ -49,7 +49,7 @@
 Summary:	Ultramarine Linux release files
 Name:		ultramarine-release
 Version:	%{dist_version}
-Release:	7%{?dist}
+Release:	8%{?dist}
 License:	MIT
 Source0:	LICENSE
 URL:        https://ultramarine-linux.org
@@ -191,6 +191,8 @@ Provides:   system-release-product
 # package must provide it. This Recommends: pulls in
 # ultramarine-release-identity-cinnamon if nothing else is already doing so.
 Recommends:	ultramarine-release-identity-flagship
+# pull in slick greeter for people upgrading
+Recommends: slick-greeter
 
 %description flagship
 Provides a base package for Ultramarine Flagship configurations.
@@ -456,6 +458,8 @@ Recommends: mugshot
 Recommends: xfce4-whiskermenu-plugin
 Recommends: xfce4-docklike-plugin
 Recommends: ultramarine-release-xfce-pkgexcl
+# pull in slick greeter for people upgrading
+Recommends: slick-greeter
 
 %description xfce
 Provides a base package for Ultramarine XFCE configurations.
