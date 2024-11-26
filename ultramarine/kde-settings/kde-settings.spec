@@ -187,6 +187,7 @@ rm -rv %{buildroot}%{_libexecdir}/initial-setup
 
 rm -rfv %{buildroot}/.package_note*
 rm -rf %{buildroot}/ultramarine-kde-theme-*
+rm -rf %{buildroot}/README.md
 
 %check
 %if 0%{?version_maj:1} && 1%{?flatpak} == 0
@@ -235,6 +236,7 @@ test -f %{_datadir}/wallpapers/F%{version_maj} || ls -l %{_datadir}/wallpapers
 %{_datadir}/wallpapers/Fedora
 %endif
 %{_sysconfdir}/xdg/plasma-workspace/env/ssh-agent.sh
+%{_sysconfdir}/xdg/plasma-workspace/env/at-spi-xwayland.sh
 
 
 %files sddm
