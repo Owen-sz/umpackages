@@ -8,13 +8,13 @@ Summary: Config files for KDE
 Name:    kde-settings
 Epoch:   1
 Version: 41
-Release: 3%{?dist}
+Release: 4%{?dist}
 
 License: MIT
 Url:     https://github.com/Ultramarine-Linux/kde-settings
-Source0: https://github.com/Ultramarine-Linux/kde-settings/archive/refs/heads/um40.tar.gz#/kde-settings.tar.gz
+Source0: https://github.com/Ultramarine-Linux/kde-settings/archive/refs/heads/um%{version}.tar.gz#/kde-settings.tar.gz
 Source1: COPYING
-Source2: https://github.com/Ultramarine-Linux/ultramarine-kde-theme/archive/refs/heads/um40.zip#/ultramarine-kde-theme.zip
+Source2: https://github.com/Ultramarine-Linux/ultramarine-kde-theme/archive/refs/heads/um%{version}.zip#/ultramarine-kde-theme.zip
 
 BuildArch: noarch
 
@@ -127,7 +127,7 @@ Enhances: (initial-setup-gui and kwin-wayland)
 
 
 %prep
-%autosetup -p1 -n %{name}-um40 -a 2
+%autosetup -p1 -n %{name}-um%{version} -a 2
 
 # omit crud
 rm -fv Makefile
@@ -195,7 +195,7 @@ test -f %{_datadir}/wallpapers/F%{version_maj} || ls -l %{_datadir}/wallpapers
 
 %files
 %license COPYING
-%config(noreplace) %{_sysconfdir}/profile.d/kde.*
+%config(noreplace) %{_sysconfdir}/profile.d/kde*
 %{_sysconfdir}/fonts/conf.d/10-sub-pixel-rgb-for-kde.conf
 %{_sysconfdir}/kde/env/env.sh
 %{_sysconfdir}/kde/env/gpg-agent-startup.sh
@@ -258,6 +258,23 @@ test -f %{_datadir}/wallpapers/F%{version_maj} || ls -l %{_datadir}/wallpapers
 
 
 %changelog
+* Wed Sep 25 2024 Neal Gompa <ngompa@fedoraproject.org> - 41.2-1
+- Drop AT-SPI Xwayland property script as it's now handled by KWin
+
+* Tue Aug 20 2024 Neal Gompa <ngompa@fedoraproject.org> - 41.1-1
+- Add AT-SPI Xwayland property script
+- Make `ksshaskpass` the default for openssh
+
+* Thu Aug 15 2024 Neal Gompa <ngompa@fedoraproject.org> - 41.0-1
+- New release for new wallpapers (#2305264)
+
+* Thu Aug 15 2024 Neal Gompa <ngompa@fedoraproject.org> - 40.1-1
+- Set recommended space for NeoChat
+- Set SDDM cursor size
+
+* Thu Jul 18 2024 Fedora Release Engineering <releng@fedoraproject.org> - 40.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_41_Mass_Rebuild
+
 * Thu Mar 07 2024 Neal Gompa <ngompa@fedoraproject.org> - 40.0-1
 - Bump for F40 backgrounds
 - Enable login/logout sounds for a11y
@@ -288,9 +305,6 @@ test -f %{_datadir}/wallpapers/F%{version_maj} || ls -l %{_datadir}/wallpapers
 
 * Fri Oct 13 2023 Timothée Ravier <tim@siosm.fr> - 39.0-2
 - Switch google-noto-serif-fonts to a Recommends
-
-* Tue Oct 10 2023 Cappy Ishihara <cappy@cappuchino.xyz> - 39-10
-- 39-10
 
 * Fri Sep 01 2023 Adam Williamson <awilliam@redhat.com> - 39.0-1
 - New release 39.0 (to pick up Fedora 39 backgrounds)
