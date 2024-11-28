@@ -44,7 +44,7 @@ jobs:
         version: ["41"]
       fail-fast: false
     #if: ${{ matrix.changed_folders != '' }}
-    runs-on: ${{ matrix.pkg.arch == 'aarch64' && 'ARM64' || 'ubuntu-latest' }}
+    runs-on: ${{ matrix.pkg.arch == 'aarch64' && 'arm64' || 'ubuntu-latest' }}
     container:
       image: ghcr.io/terrapkg/builder:f${{ matrix.version }}
       options: --cap-add=SYS_ADMIN --privileged
