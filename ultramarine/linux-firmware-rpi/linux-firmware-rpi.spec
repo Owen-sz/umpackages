@@ -5,6 +5,7 @@
 %global	bz_shortcommit	%(c=%{bz_commit}; echo ${c:0:7})
 %global	fn_srcdir	firmware-nonfree-%{fn_commit}
 %global	bz_srcdir	bluez-firmware-%{bz_commit}
+%define debug_package %nil
 
 Name:		linux-firmware-rpi
 Version:	20240528
