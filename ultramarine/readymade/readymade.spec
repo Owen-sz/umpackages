@@ -1,5 +1,5 @@
 Name:           readymade
-Version:        0.1.12
+Version:        0.2.0
 Release:        1%?dist
 Summary:        Install ready-made distribution images!
 License:        MIT
