@@ -65,6 +65,7 @@
       <packagereq type="default">ultramarine-system-configs-desktop</packagereq>
       <packagereq type="default">system76-scheduler</packagereq>
       <packagereq type="default">orca</packagereq>
+      <packagereq type="default">icoextract-thumbnailer</packagereq>
       <packagereq type="default">speech-dispatcher-espeak-ng</packagereq>
       <packagereq type="default">sipa-fonts</packagereq>
       <packagereq type="default">ibus-mozc</packagereq>
