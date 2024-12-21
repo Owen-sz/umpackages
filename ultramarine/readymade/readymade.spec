@@ -1,6 +1,6 @@
 Name:           readymade
 Version:        0.3.3
-Release:        1%?dist
+Release:        2%?dist
 Summary:        Install ready-made distribution images!
 License:        MIT
 URL:            https://github.com/FyraLabs/readymade
@@ -24,6 +24,7 @@ It is created as a replacement to Red Hat's Anaconda installer for Ultramarine L
 %install
 %cargo_install
 ./install.sh %buildroot
+ln -sf %{_datadir}/applications/com.fyralabs.Readymade.desktop %{buildroot}%{_datadir}/applications/liveinst.desktop
 
 %find_lang com.fyralabs.Readymade
 
