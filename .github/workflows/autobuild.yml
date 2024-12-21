@@ -15,7 +15,7 @@ on:
 
 jobs:
   manifest:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     outputs:
       build_matrix: ${{ steps.generate_build_matrix.outputs.build_matrix }}
     container:
@@ -38,7 +38,7 @@ jobs:
         version: ["41"]
         pkg: ${{ fromJson(needs.manifest.outputs.build_matrix) }}
       fail-fast: false
-    runs-on: ${{ matrix.pkg.arch == 'aarch64' && 'arm64' || 'ubuntu-latest' }}
+    runs-on: ${{ matrix.pkg.arch == 'aarch64' && 'arm64' || 'ubuntu-22.04' }}
     container:
       image: ghcr.io/terrapkg/builder:f${{ matrix.version }}
       options: --cap-add=SYS_ADMIN --privileged
