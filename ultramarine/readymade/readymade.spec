@@ -1,5 +1,5 @@
 Name:           readymade
-Version:        0.5.0
+Version:        0.6.0
 Release:        1%?dist
 Summary:        Install ready-made distribution images!
 License:        MIT
@@ -9,6 +9,8 @@ BuildRequires:	anda-srpm-macros rust-packaging mold
 BuildRequires:  pkgconfig(libhelium-1)
 BuildRequires:  pkgconfig(gnome-desktop-4)
 BuildRequires:  clang-devel
+
+Requires:  efibootmgr
 
 %description
 Readymade is a Linux Distribution installer based on the great distinst library by System76.
