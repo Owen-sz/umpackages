@@ -200,6 +200,7 @@ compat_link $DEFAULT_DARK_WALL images/default-dark-16_10.png
 
 %files gnome
 %{_datadir}/gnome-background-properties/ultramarine-wallpapers-extras.xml
+%{_datadir}/gnome-background-properties/ultramarine.xml
 
 %files kde
 "%{_datadir}/wallpapers/Tortuga Dark"
