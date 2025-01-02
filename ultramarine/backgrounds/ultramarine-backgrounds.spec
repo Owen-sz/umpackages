@@ -71,7 +71,6 @@ Other submissions from the Ultramarine Wallpaper contest
 %package        community-kde
 Summary:        community wallpapers for KDE
 Requires:       ultramarine-backgrounds-community
-Requires:       ultramarine-backgrounds-community-gnome
 
 %description    community-kde
 community wallpapers for KDE
@@ -79,7 +78,6 @@ community wallpapers for KDE
 %package        community-gnome
 Summary:        community wallpapers for gnome
 Requires:       ultramarine-backgrounds-community
-Requires:       ultramarine-backgrounds-community-kde
 
 %description    community-gnome
 community wallpapers for gnome
