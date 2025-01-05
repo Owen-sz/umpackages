@@ -57,6 +57,9 @@ AppCenter repository file for Ultramarine Linux
 Summary: Additional repo for Raspberry Pi Kernel
 Source300: https://copr.fedorainfracloud.org/coprs/dwrobel/kernel-rpi/repo/fedora-%{version}/dwrobel-kernel-rpi-fedora-%{version}.repo
 
+%description rpi
+Additional repository for Raspberry Pi Kernel
+
 %prep
 
 %build
