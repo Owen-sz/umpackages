@@ -1,5 +1,5 @@
 Name:           readymade
-Version:        0.7.1
+Version:        0.8.0
 Release:        1%?dist
 Summary:        Install ready-made distribution images!
 License:        MIT
@@ -36,4 +36,5 @@ ln -sf %{_datadir}/applications/com.fyralabs.Readymade.desktop %{buildroot}%{_da
 %_datadir/applications/com.fyralabs.Readymade.desktop
 %_datadir/applications/liveinst.desktop
 %_datadir/readymade
+%_datadir/icons/hicolor/scalable/apps/com.fyralabs.Readymade.svg
 %_sysconfdir/readymade.toml
