@@ -1,5 +1,5 @@
 Name:           taidan
-Version:        0.1.3
+Version:        0.1.4
 Release:        1%?dist
 Summary:        Out-Of-Box-Experience (OOBE) and Welcome App
 SourceLicense:  GPL-3.0-or-later
@@ -12,6 +12,8 @@ Requires:       systemd-udev
 Requires:       bash
 Requires:       (dnf5 and dnf5-command(copr))
 Requires:       flatpak
+Requires:       libwebp
+Requires:       webp-pixbuf-loader
 BuildRequires:  anda-srpm-macros mold cargo rust-packaging perl
 BuildRequires:  pkgconfig(libhelium-1)
 BuildRequires:  pkgconfig(openssl)
@@ -35,7 +37,7 @@ Linux, written in Rust and the Helium toolkit.
 %install
 %cargo_install
 for category in catalogue/*; do
-    install -Dpm644 $category -t %buildroot%_sysconfdir/com.FyraLabs.Taidan/catalogue/
+    install -Dpm644 $category -t %buildroot%_sysconfdir/com.fyralabs.Taidan/catalogue/
 done
 install -Dpm644 data/sysusers.d/taidan.conf -t %buildroot%_sysusersdir
 install -Dpm644 data/polkit-1/rules.d/100-taidan.rules -t %buildroot%_datadir/polkit-1/rules.d/
@@ -45,5 +47,5 @@ install -Dpm644 data/polkit-1/rules.d/100-taidan.rules -t %buildroot%_datadir/po
 %license LICENSE.md LICENSE.dependencies
 %_bindir/taidan
 %_datadir/polkit-1/rules.d/100-taidan.rules
-%_sysconfdir/com.FyraLabs.Taidan/
+%_sysconfdir/com.fyralabs.Taidan/
 %_sysusersdir/taidan.conf
