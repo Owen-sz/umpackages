@@ -1,4 +1,4 @@
-%define ver 41.3
+%define ver 41.4
 %undefine _disable_source_fetch
 
 Name: ultramarine-backgrounds
