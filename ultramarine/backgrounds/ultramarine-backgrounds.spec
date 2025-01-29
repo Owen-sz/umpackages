@@ -138,7 +138,7 @@ kde_link 41-community-extras/Wavelength.png "Wavelength"
 kde_link 41-community-extras/wavelet-dark.png "Wavelet Dark"
 kde_link 41-community-extras/wavelet-light.png "Wavelet Light"
 
-kde_link 41-community-extras/Waves-clean.png "Waves Clean"
+kde_link 41-community-extras/waves-clean.png "Waves Clean"
 
 kde_link preview/blueprint.png "Ultramarine Preview"
 
